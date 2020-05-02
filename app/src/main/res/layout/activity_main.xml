@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DesignPatternMainActivity">
+
+    <Button
+        android:id="@+id/iterator"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:text="iterator"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/adapter"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Adapter"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/template_method"
+        app:layout_constraintStart_toEndOf="@id/iterator"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/template_method"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Template Method"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/factory_method"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:text="Factory Method"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iterator" />
+
+    <Button
+        android:id="@+id/singleton"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Singleton"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/prototype"
+        app:layout_constraintStart_toEndOf="@id/factory_method"
+        app:layout_constraintTop_toBottomOf="@+id/adapter" />
+
+
+    <Button
+        android:id="@+id/prototype"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Prototype"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/template_method" />
+
+    <Button
+        android:id="@+id/builder"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:text="Builder"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/factory_method" />
+
+    <Button
+        android:id="@+id/b"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Adapter"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/c"
+        app:layout_constraintStart_toEndOf="@id/builder"
+        app:layout_constraintTop_toBottomOf="@+id/singleton" />
+
+    <Button
+        android:id="@+id/c"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Template Method"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototype" />
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/a"-->
+    <!--        android:layout_width="135dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:text="iterator"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/b"-->
+    <!--        android:layout_width="136dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:text="Adapter"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/a"-->
+    <!--        app:layout_constraintEnd_toStartOf="@id/c"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/c"-->
+    <!--        android:layout_width="136dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:text="Template Method"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
