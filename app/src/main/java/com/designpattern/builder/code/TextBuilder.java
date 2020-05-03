@@ -1,6 +1,6 @@
 package com.designpattern.builder.code;
 
-public class TextBuilder implements Builder{
+public class TextBuilder implements Builder {
     static String TAG = TextBuilder.class.getSimpleName();
 
     private String buffer;

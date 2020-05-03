@@ -4,6 +4,7 @@ public class PrintBanner implements IPrint {
 
     //委譲パターン
     private Banner banner;
+
     public PrintBanner(String str) {
         banner = new Banner(str);
     }

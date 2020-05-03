@@ -17,14 +17,16 @@ public class BasePatternActivity extends AbsBaseDesignPatternActivity {
 
     @Override
     protected void serDescription() {
-        ArrayList<String> strings = new ArrayList<String>() {};
+        ArrayList<String> strings = new ArrayList<String>() {
+        };
         strings.add("");
         super.description(strings);
     }
 
     @Override
     protected void setMerit() {
-        ArrayList<String> strings = new ArrayList<String>() {};
+        ArrayList<String> strings = new ArrayList<String>() {
+        };
         strings.add("");
         super.merit(strings);
     }

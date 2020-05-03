@@ -8,6 +8,7 @@ public class IDCard extends Product {
     private static String TAG = IDCard.class.getSimpleName();
 
     String owner;
+
     IDCard(String string) {
         owner = string;
     }

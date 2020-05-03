@@ -8,12 +8,12 @@ public class Singleton {
     private static Singleton sSingleton;
 
     //privateにして他のクラスからインスタンスを作れないようにする
-    private Singleton(){
+    private Singleton() {
 
     }
 
     public static Singleton getInstance() {
-        if(sSingleton == null) {
+        if (sSingleton == null) {
             sSingleton = new Singleton();
         }
         return sSingleton;

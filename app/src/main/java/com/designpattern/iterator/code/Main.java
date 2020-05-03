@@ -19,7 +19,7 @@ public class Main extends AbsMainCode {
         Iterator iterator = bookShelf.iterator();
         while (iterator.hasNext()) {
             Book book = (Book) iterator.next();
-            Log.e("book" , book.getName());
+            Log.e("book", book.getName());
         }
     }
 }

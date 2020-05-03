@@ -6,6 +6,7 @@ public class CharDisplay extends AbsDisplay {
     private static String TAG = CharDisplay.class.getSimpleName();
 
     char c;
+
     CharDisplay(char c) {
         this.c = c;
     }

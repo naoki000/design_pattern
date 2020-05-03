@@ -1,7 +1,6 @@
 package com.designpattern;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -44,7 +43,7 @@ public abstract class AbsBaseDesignPatternActivity extends AppCompatActivity {
 
     protected String getStrings(ArrayList<String> strings) {
         String res = "";
-        for (String str: strings) {
+        for (String str : strings) {
             res = res + "・" + str + "\n";
         }
 

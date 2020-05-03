@@ -24,6 +24,18 @@
         <activity android:name=".singleton.SingletonPatternActivity"/>
         <activity android:name=".prototype.PrototypePatternActivity"/>
         <activity android:name=".builder.BuilderPatternActivity"/>
+        <activity android:name=".abstractfactory.AbstractFactoryPatternActivity"/>
+        <activity android:name=".bridge.BridgePatternActivity"/>
+        <activity android:name=".strategy.StrategyPatternActivity"/>
+        <activity android:name=".composite.CompositePatternActivity"/>
+        <activity android:name=".decorator.DecoratorPatternActivity"/>
+        <activity android:name=".visitor.VisitorPatternActivity"/>
+        <activity android:name=".chainofresponsibility.ChainOfResponsibilityPatternActivity"/>
+        <activity android:name=".facade.FacadePatternActivity"/>
+        <activity android:name=".madiator.MediatorPatternActivity"/>
+        <activity android:name=".observer.ObserverPatternActivity"/>
+        <activity android:name=".memento.MementoPatternActivity"/>
+        <activity android:name=".state.StatePatternActivity"/>
 
     </application>
 

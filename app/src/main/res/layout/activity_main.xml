@@ -73,23 +73,135 @@
         app:layout_constraintTop_toBottomOf="@+id/factory_method" />
 
     <Button
+        android:id="@+id/abstract_factory"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Abstract Factory"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/bridge"
+        app:layout_constraintStart_toEndOf="@id/builder"
+        app:layout_constraintTop_toBottomOf="@+id/singleton" />
+
+    <Button
+        android:id="@+id/bridge"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Bridge"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prototype" />
+
+    <Button
+        android:id="@+id/strategy"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:text="Strategy"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/builder" />
+
+    <Button
+        android:id="@+id/composite"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Composite"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/strategy"
+        app:layout_constraintStart_toEndOf="@id/decorator"
+        app:layout_constraintTop_toBottomOf="@+id/abstract_factory" />
+
+    <Button
+        android:id="@+id/decorator"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Decorator"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/builder" />
+
+    <Button
+        android:id="@+id/visitor"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:text="Visitor"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/strategy" />
+
+    <Button
+        android:id="@+id/chain_of_responsibility"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Chain Of Responsibility"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/strategy"
+        app:layout_constraintStart_toEndOf="@id/decorator"
+        app:layout_constraintTop_toBottomOf="@+id/composite" />
+
+    <Button
+        android:id="@+id/facade"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Facade"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decorator" />
+
+    <Button
+        android:id="@+id/mediator"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:text="Mediator"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/visitor" />
+
+    <Button
+        android:id="@+id/observer"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Observer"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/strategy"
+        app:layout_constraintStart_toEndOf="@id/decorator"
+        app:layout_constraintTop_toBottomOf="@+id/chain_of_responsibility" />
+
+    <Button
+        android:id="@+id/memento"
+        android:layout_width="136dp"
+        android:layout_height="100dp"
+        android:text="Memento"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/facade" />
+
+    <Button
+        android:id="@+id/state"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:text="State"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediator" />
+
+    <Button
         android:id="@+id/b"
         android:layout_width="136dp"
         android:layout_height="100dp"
-        android:text="Adapter"
+        android:text="Observer"
         android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/c"
-        app:layout_constraintStart_toEndOf="@id/builder"
-        app:layout_constraintTop_toBottomOf="@+id/singleton" />
+        app:layout_constraintEnd_toStartOf="@id/strategy"
+        app:layout_constraintStart_toEndOf="@id/decorator"
+        app:layout_constraintTop_toBottomOf="@+id/observer" />
 
     <Button
         android:id="@+id/c"
         android:layout_width="136dp"
         android:layout_height="100dp"
-        android:text="Template Method"
+        android:text="Memento"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prototype" />
+        app:layout_constraintTop_toBottomOf="@+id/memento" />
 
 
     <!--    <Button-->

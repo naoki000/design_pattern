@@ -17,14 +17,16 @@ public class SingletonPatternActivity extends AbsBaseDesignPatternActivity {
 
     @Override
     protected void serDescription() {
-        ArrayList<String> strings = new ArrayList<String>() {};
+        ArrayList<String> strings = new ArrayList<String>() {
+        };
         strings.add("そのクラスのインスタンスが絶対に一つしかそんざいしなことを保証する方法");
         super.description(strings);
     }
 
     @Override
     protected void setMerit() {
-        ArrayList<String> strings = new ArrayList<String>() {};
+        ArrayList<String> strings = new ArrayList<String>() {
+        };
         strings.add("このパターンはAbstract Factory, Builder, Facade, Prototypeのパターンでよく使われる");
         super.merit(strings);
     }
