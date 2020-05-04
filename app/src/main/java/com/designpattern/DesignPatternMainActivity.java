@@ -10,15 +10,19 @@ import com.designpattern.adapter.AdapterPatternActivity;
 import com.designpattern.bridge.BridgePatternActivity;
 import com.designpattern.builder.BuilderPatternActivity;
 import com.designpattern.chainofresponsibility.ChainOfResponsibilityPatternActivity;
+import com.designpattern.command.CommandPatternActivity;
 import com.designpattern.composite.CompositePatternActivity;
 import com.designpattern.decorator.DecoratorPatternActivity;
 import com.designpattern.facade.FacadePatternActivity;
 import com.designpattern.factorymethod.FactoryMethodPatternActivity;
+import com.designpattern.flyweight.FlyweightPatternActivity;
+import com.designpattern.interpreter.InterpreterPatternActivity;
 import com.designpattern.iterator.IteratorPatternActivity;
 import com.designpattern.madiator.MediatorPatternActivity;
 import com.designpattern.memento.MementoPatternActivity;
 import com.designpattern.observer.ObserverPatternActivity;
 import com.designpattern.prototype.PrototypePatternActivity;
+import com.designpattern.proxy.ProxyPatternActivity;
 import com.designpattern.singleton.SingletonPatternActivity;
 import com.designpattern.state.StatePatternActivity;
 import com.designpattern.strategy.StrategyPatternActivity;
@@ -54,6 +58,10 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
     private View mObserverPattern;
     private View mMementoPattern;
     private View mStatePattern;
+    private View mFlyWeightPattern;
+    private View mProxyPattern;
+    private View mCommandPattern;
+    private View mInterpreterPattern;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +89,10 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
         mObserverPattern = makeInstance(R.id.observer);
         mMementoPattern = makeInstance(R.id.memento);
         mStatePattern = makeInstance(R.id.state);
+        mFlyWeightPattern = makeInstance(R.id.flyweight);
+        mProxyPattern = makeInstance(R.id.proxy);
+        mCommandPattern = makeInstance(R.id.command);
+        mInterpreterPattern = makeInstance(R.id.interpreter);
 
         setListener();
     }
@@ -158,6 +170,18 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
                 break;
             case R.id.state:
                 intent.setClass(mContext, StatePatternActivity.class);
+                break;
+            case R.id.flyweight:
+                intent.setClass(mContext, FlyweightPatternActivity.class);
+                break;
+            case R.id.proxy:
+                intent.setClass(mContext, ProxyPatternActivity.class);
+                break;
+            case R.id.command:
+                intent.setClass(mContext, CommandPatternActivity.class);
+                break;
+            case R.id.interpreter:
+                intent.setClass(mContext, InterpreterPatternActivity.class);
                 break;
             default:
                 break;

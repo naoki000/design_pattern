@@ -36,6 +36,10 @@
         <activity android:name=".observer.ObserverPatternActivity"/>
         <activity android:name=".memento.MementoPatternActivity"/>
         <activity android:name=".state.StatePatternActivity"/>
+        <activity android:name=".flyweight.FlyweightPatternActivity"/>
+        <activity android:name=".proxy.ProxyPatternActivity"/>
+        <activity android:name=".command.CommandPatternActivity"/>
+        <activity android:name=".interpreter.InterpreterPatternActivity"/>
 
     </application>
 

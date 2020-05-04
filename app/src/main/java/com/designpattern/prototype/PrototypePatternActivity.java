@@ -21,7 +21,7 @@ public class PrototypePatternActivity extends AbsBaseDesignPatternActivity {
         };
         strings.add("クラスからインスタンスを作るのではなく、インスタンスをコピーして新しいインスタンスを作成する方式");
         strings.add("「種類が多すぎてクラスにまとめられない場合」、「クラスからインスタンス生成が難しい場合」、「フレームワークと生成するインスタンスを分けたい場合」に有効");
-        strings.add("現在のインスタンスと同じ状態の別のインスタンスを作る");
+        strings.add("現在のインスタンスと同じ状態の別のインスタンスを作る(cloneする)");
         strings.add("このパタンはshallow copyなので注意（配列とかあったら同じものを指してしまう）");
         super.description(strings);
     }
