@@ -10,6 +10,7 @@ public abstract class Factory {
         Factory factory = null;
 
         try {
+            //注意:このインスタンスの生成方法では、必ず引数無しのコンストラクタが呼ばれる
             factory = (Factory) Class.forName(classname).newInstance();
         } catch (ClassNotFoundException e) {
             Log.e(TAG, "not match");

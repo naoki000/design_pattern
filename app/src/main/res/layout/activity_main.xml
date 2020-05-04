@@ -6,231 +6,262 @@
     android:layout_height="match_parent"
     tools:context=".DesignPatternMainActivity">
 
-    <Button
-        android:id="@+id/iterator"
-        android:layout_width="135dp"
-        android:layout_height="100dp"
-        android:text="iterator"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/adapter"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Adapter"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/template_method"
-        app:layout_constraintStart_toEndOf="@id/iterator"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/template_method"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Template Method"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/iterator"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="iterator"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/factory_method"
-        android:layout_width="135dp"
-        android:layout_height="100dp"
-        android:text="Factory Method"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iterator" />
+            <Button
+                android:id="@+id/adapter"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Adapter"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/template_method"
+                app:layout_constraintStart_toEndOf="@id/iterator"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/singleton"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Singleton"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/prototype"
-        app:layout_constraintStart_toEndOf="@id/factory_method"
-        app:layout_constraintTop_toBottomOf="@+id/adapter" />
+            <Button
+                android:id="@+id/template_method"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Template Method"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <Button
+                android:id="@+id/factory_method"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="Factory Method"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iterator" />
 
-    <Button
-        android:id="@+id/prototype"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Prototype"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/template_method" />
-
-    <Button
-        android:id="@+id/builder"
-        android:layout_width="135dp"
-        android:layout_height="100dp"
-        android:text="Builder"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/factory_method" />
-
-    <Button
-        android:id="@+id/abstract_factory"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Abstract Factory"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/bridge"
-        app:layout_constraintStart_toEndOf="@id/builder"
-        app:layout_constraintTop_toBottomOf="@+id/singleton" />
-
-    <Button
-        android:id="@+id/bridge"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Bridge"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/prototype" />
-
-    <Button
-        android:id="@+id/strategy"
-        android:layout_width="135dp"
-        android:layout_height="100dp"
-        android:text="Strategy"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/builder" />
-
-    <Button
-        android:id="@+id/composite"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Composite"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/strategy"
-        app:layout_constraintStart_toEndOf="@id/decorator"
-        app:layout_constraintTop_toBottomOf="@+id/abstract_factory" />
-
-    <Button
-        android:id="@+id/decorator"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Decorator"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/builder" />
-
-    <Button
-        android:id="@+id/visitor"
-        android:layout_width="135dp"
-        android:layout_height="100dp"
-        android:text="Visitor"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/strategy" />
-
-    <Button
-        android:id="@+id/chain_of_responsibility"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Chain Of Responsibility"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/strategy"
-        app:layout_constraintStart_toEndOf="@id/decorator"
-        app:layout_constraintTop_toBottomOf="@+id/composite" />
-
-    <Button
-        android:id="@+id/facade"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Facade"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/decorator" />
-
-    <Button
-        android:id="@+id/mediator"
-        android:layout_width="135dp"
-        android:layout_height="100dp"
-        android:text="Mediator"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/visitor" />
-
-    <Button
-        android:id="@+id/observer"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Observer"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/strategy"
-        app:layout_constraintStart_toEndOf="@id/decorator"
-        app:layout_constraintTop_toBottomOf="@+id/chain_of_responsibility" />
-
-    <Button
-        android:id="@+id/memento"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Memento"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/facade" />
-
-    <Button
-        android:id="@+id/state"
-        android:layout_width="135dp"
-        android:layout_height="100dp"
-        android:text="State"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mediator" />
-
-    <Button
-        android:id="@+id/b"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Observer"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toStartOf="@id/strategy"
-        app:layout_constraintStart_toEndOf="@id/decorator"
-        app:layout_constraintTop_toBottomOf="@+id/observer" />
-
-    <Button
-        android:id="@+id/c"
-        android:layout_width="136dp"
-        android:layout_height="100dp"
-        android:text="Memento"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/memento" />
+            <Button
+                android:id="@+id/singleton"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Singleton"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/prototype"
+                app:layout_constraintStart_toEndOf="@id/factory_method"
+                app:layout_constraintTop_toBottomOf="@+id/adapter" />
 
 
-    <!--    <Button-->
-    <!--        android:id="@+id/a"-->
-    <!--        android:layout_width="135dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:text="iterator"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+            <Button
+                android:id="@+id/prototype"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Prototype"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/template_method" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/b"-->
-    <!--        android:layout_width="136dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:text="Adapter"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        app:layout_constraintStart_toEndOf="@id/a"-->
-    <!--        app:layout_constraintEnd_toStartOf="@id/c"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+            <Button
+                android:id="@+id/builder"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="Builder"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/factory_method" />
 
-    <!--    <Button-->
-    <!--        android:id="@+id/c"-->
-    <!--        android:layout_width="136dp"-->
-    <!--        android:layout_height="100dp"-->
-    <!--        android:text="Template Method"-->
-    <!--        android:textAllCaps="false"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+            <Button
+                android:id="@+id/abstract_factory"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Abstract Factory"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/bridge"
+                app:layout_constraintStart_toEndOf="@id/builder"
+                app:layout_constraintTop_toBottomOf="@+id/singleton" />
 
+            <Button
+                android:id="@+id/bridge"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Bridge"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/prototype" />
+
+            <Button
+                android:id="@+id/strategy"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="Strategy"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/builder" />
+
+            <Button
+                android:id="@+id/composite"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Composite"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/strategy"
+                app:layout_constraintStart_toEndOf="@id/decorator"
+                app:layout_constraintTop_toBottomOf="@+id/abstract_factory" />
+
+            <Button
+                android:id="@+id/decorator"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Decorator"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/builder" />
+
+            <Button
+                android:id="@+id/visitor"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="Visitor"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/strategy" />
+
+            <Button
+                android:id="@+id/chain_of_responsibility"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Chain Of Responsibility"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/strategy"
+                app:layout_constraintStart_toEndOf="@id/decorator"
+                app:layout_constraintTop_toBottomOf="@+id/composite" />
+
+            <Button
+                android:id="@+id/facade"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Facade"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/decorator" />
+
+            <Button
+                android:id="@+id/mediator"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="Mediator"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/visitor" />
+
+            <Button
+                android:id="@+id/observer"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Observer"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/strategy"
+                app:layout_constraintStart_toEndOf="@id/decorator"
+                app:layout_constraintTop_toBottomOf="@+id/chain_of_responsibility" />
+
+            <Button
+                android:id="@+id/memento"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Memento"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/facade" />
+
+            <Button
+                android:id="@+id/state"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="State"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mediator" />
+
+            <Button
+                android:id="@+id/flyweight"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Flyweight"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/strategy"
+                app:layout_constraintStart_toEndOf="@id/decorator"
+                app:layout_constraintTop_toBottomOf="@+id/observer" />
+
+            <Button
+                android:id="@+id/proxy"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Proxy"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/memento" />
+
+            <Button
+                android:id="@+id/command"
+                android:layout_width="135dp"
+                android:layout_height="100dp"
+                android:text="Command"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/state" />
+
+            <Button
+                android:id="@+id/interpreter"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Interpreter"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/strategy"
+                app:layout_constraintStart_toEndOf="@id/decorator"
+                app:layout_constraintTop_toBottomOf="@+id/flyweight" />
+
+
+            <!--    <Button-->
+            <!--        android:id="@+id/a"-->
+            <!--        android:layout_width="135dp"-->
+            <!--        android:layout_height="100dp"-->
+            <!--        android:text="iterator"-->
+            <!--        android:textAllCaps="false"-->
+            <!--        app:layout_constraintStart_toStartOf="parent"-->
+            <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--    <Button-->
+            <!--        android:id="@+id/b"-->
+            <!--        android:layout_width="136dp"-->
+            <!--        android:layout_height="100dp"-->
+            <!--        android:text="Adapter"-->
+            <!--        android:textAllCaps="false"-->
+            <!--        app:layout_constraintStart_toEndOf="@id/a"-->
+            <!--        app:layout_constraintEnd_toStartOf="@id/c"-->
+            <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--    <Button-->
+            <!--        android:id="@+id/c"-->
+            <!--        android:layout_width="136dp"-->
+            <!--        android:layout_height="100dp"-->
+            <!--        android:text="Template Method"-->
+            <!--        android:textAllCaps="false"-->
+            <!--        app:layout_constraintEnd_toEndOf="parent"-->
+            <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
