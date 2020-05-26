@@ -5,29 +5,30 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.designpattern.abstractfactory.AbstractFactoryPatternActivity;
-import com.designpattern.adapter.AdapterPatternActivity;
-import com.designpattern.bridge.BridgePatternActivity;
-import com.designpattern.builder.BuilderPatternActivity;
-import com.designpattern.chainofresponsibility.ChainOfResponsibilityPatternActivity;
-import com.designpattern.command.CommandPatternActivity;
-import com.designpattern.composite.CompositePatternActivity;
-import com.designpattern.decorator.DecoratorPatternActivity;
-import com.designpattern.facade.FacadePatternActivity;
-import com.designpattern.factorymethod.FactoryMethodPatternActivity;
-import com.designpattern.flyweight.FlyweightPatternActivity;
-import com.designpattern.interpreter.InterpreterPatternActivity;
-import com.designpattern.iterator.IteratorPatternActivity;
-import com.designpattern.madiator.MediatorPatternActivity;
-import com.designpattern.memento.MementoPatternActivity;
-import com.designpattern.observer.ObserverPatternActivity;
-import com.designpattern.prototype.PrototypePatternActivity;
-import com.designpattern.proxy.ProxyPatternActivity;
-import com.designpattern.singleton.SingletonPatternActivity;
-import com.designpattern.state.StatePatternActivity;
-import com.designpattern.strategy.StrategyPatternActivity;
-import com.designpattern.templatemethod.TemplateMethodPatternActivity;
-import com.designpattern.visitor.VisitorPatternActivity;
+import com.designpattern.R;
+import com.designpattern.basic.abstractfactory.AbstractFactoryPatternActivity;
+import com.designpattern.basic.adapter.AdapterPatternActivity;
+import com.designpattern.basic.bridge.BridgePatternActivity;
+import com.designpattern.basic.builder.BuilderPatternActivity;
+import com.designpattern.basic.chainofresponsibility.ChainOfResponsibilityPatternActivity;
+import com.designpattern.basic.command.CommandPatternActivity;
+import com.designpattern.basic.composite.CompositePatternActivity;
+import com.designpattern.basic.decorator.DecoratorPatternActivity;
+import com.designpattern.basic.facade.FacadePatternActivity;
+import com.designpattern.basic.factorymethod.FactoryMethodPatternActivity;
+import com.designpattern.basic.flyweight.FlyweightPatternActivity;
+import com.designpattern.basic.interpreter.InterpreterPatternActivity;
+import com.designpattern.basic.iterator.IteratorPatternActivity;
+import com.designpattern.basic.madiator.MediatorPatternActivity;
+import com.designpattern.basic.memento.MementoPatternActivity;
+import com.designpattern.basic.observer.ObserverPatternActivity;
+import com.designpattern.basic.prototype.PrototypePatternActivity;
+import com.designpattern.basic.proxy.ProxyPatternActivity;
+import com.designpattern.basic.singleton.SingletonPatternActivity;
+import com.designpattern.basic.state.StatePatternActivity;
+import com.designpattern.basic.strategy.StrategyPatternActivity;
+import com.designpattern.basic.templatemethod.TemplateMethodPatternActivity;
+import com.designpattern.basic.visitor.VisitorPatternActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +40,7 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
     private Context mContext;
     private List<View> mDesignPatternList;
 
+    /*Basic Design Pattern*/
     private View mIteratorPattern;
     private View mAdapterPattern;
     private View mTemplateMethodPattern;
@@ -63,6 +65,7 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
     private View mCommandPattern;
     private View mInterpreterPattern;
 
+    /*Multi Thread Design Pattern*/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +73,14 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
         setContentView(R.layout.activity_main);
         mDesignPatternList = new ArrayList<>();
 
+        setBasicDesignPattern();
+        setMultiThreadDesignPattern();
+
+
+        setListener();
+    }
+
+    private void setBasicDesignPattern() {
         mIteratorPattern = makeInstance(R.id.iterator);
         mAdapterPattern = makeInstance(R.id.adapter);
         mTemplateMethodPattern = makeInstance(R.id.template_method);
@@ -93,14 +104,15 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
         mProxyPattern = makeInstance(R.id.proxy);
         mCommandPattern = makeInstance(R.id.command);
         mInterpreterPattern = makeInstance(R.id.interpreter);
-
-        setListener();
     }
 
     private View makeInstance(int id) {
         View view = findViewById(id);
         mDesignPatternList.add(view);
         return view;
+    }
+
+    private void setMultiThreadDesignPattern() {
     }
 
     private void setListener() {
@@ -114,6 +126,7 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
         Intent intent = new Intent();
 
         switch (view.getId()) {
+            /*Basic Design Pattern*/
             case R.id.iterator:
                 intent.setClass(mContext, IteratorPatternActivity.class);
                 break;
@@ -183,6 +196,8 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
             case R.id.interpreter:
                 intent.setClass(mContext, InterpreterPatternActivity.class);
                 break;
+            /*Multi Thread Design Pattern*/
+
             default:
                 break;
         }

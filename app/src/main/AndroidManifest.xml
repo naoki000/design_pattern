@@ -17,29 +17,29 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".iterator.IteratorPatternActivity"/>
-        <activity android:name=".adapter.AdapterPatternActivity"/>
-        <activity android:name=".templatemethod.TemplateMethodPatternActivity"/>
-        <activity android:name=".factorymethod.FactoryMethodPatternActivity"/>
-        <activity android:name=".singleton.SingletonPatternActivity"/>
-        <activity android:name=".prototype.PrototypePatternActivity"/>
-        <activity android:name=".builder.BuilderPatternActivity"/>
-        <activity android:name=".abstractfactory.AbstractFactoryPatternActivity"/>
-        <activity android:name=".bridge.BridgePatternActivity"/>
-        <activity android:name=".strategy.StrategyPatternActivity"/>
-        <activity android:name=".composite.CompositePatternActivity"/>
-        <activity android:name=".decorator.DecoratorPatternActivity"/>
-        <activity android:name=".visitor.VisitorPatternActivity"/>
-        <activity android:name=".chainofresponsibility.ChainOfResponsibilityPatternActivity"/>
-        <activity android:name=".facade.FacadePatternActivity"/>
-        <activity android:name=".madiator.MediatorPatternActivity"/>
-        <activity android:name=".observer.ObserverPatternActivity"/>
-        <activity android:name=".memento.MementoPatternActivity"/>
-        <activity android:name=".state.StatePatternActivity"/>
-        <activity android:name=".flyweight.FlyweightPatternActivity"/>
-        <activity android:name=".proxy.ProxyPatternActivity"/>
-        <activity android:name=".command.CommandPatternActivity"/>
-        <activity android:name=".interpreter.InterpreterPatternActivity"/>
+        <activity android:name=".basic.iterator.IteratorPatternActivity"/>
+        <activity android:name=".basic.adapter.AdapterPatternActivity"/>
+        <activity android:name=".basic.templatemethod.TemplateMethodPatternActivity"/>
+        <activity android:name=".basic.factorymethod.FactoryMethodPatternActivity"/>
+        <activity android:name=".basic.singleton.SingletonPatternActivity"/>
+        <activity android:name=".basic.prototype.PrototypePatternActivity"/>
+        <activity android:name=".basic.builder.BuilderPatternActivity"/>
+        <activity android:name=".basic.abstractfactory.AbstractFactoryPatternActivity"/>
+        <activity android:name=".basic.bridge.BridgePatternActivity"/>
+        <activity android:name=".basic.strategy.StrategyPatternActivity"/>
+        <activity android:name=".basic.composite.CompositePatternActivity"/>
+        <activity android:name=".basic.decorator.DecoratorPatternActivity"/>
+        <activity android:name=".basic.visitor.VisitorPatternActivity"/>
+        <activity android:name=".basic.chainofresponsibility.ChainOfResponsibilityPatternActivity"/>
+        <activity android:name=".basic.facade.FacadePatternActivity"/>
+        <activity android:name=".basic.madiator.MediatorPatternActivity"/>
+        <activity android:name=".basic.observer.ObserverPatternActivity"/>
+        <activity android:name=".basic.memento.MementoPatternActivity"/>
+        <activity android:name=".basic.state.StatePatternActivity"/>
+        <activity android:name=".basic.flyweight.FlyweightPatternActivity"/>
+        <activity android:name=".basic.proxy.ProxyPatternActivity"/>
+        <activity android:name=".basic.command.CommandPatternActivity"/>
+        <activity android:name=".basic.interpreter.InterpreterPatternActivity"/>
 
     </application>
 
