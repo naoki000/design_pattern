@@ -232,6 +232,16 @@
                 app:layout_constraintStart_toEndOf="@id/decorator"
                 app:layout_constraintTop_toBottomOf="@+id/flyweight" />
 
+<!--            /*Multi Thread Design Pattern*/-->
+            <Button
+                android:id="@+id/SingleThreadExecutionPattern"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="SingleThreadExecutionPattern"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxy" />
+
 
             <!--    <Button-->
             <!--        android:id="@+id/a"-->

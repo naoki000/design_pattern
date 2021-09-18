@@ -29,6 +29,7 @@ import com.designpattern.basic.state.StatePatternActivity;
 import com.designpattern.basic.strategy.StrategyPatternActivity;
 import com.designpattern.basic.templatemethod.TemplateMethodPatternActivity;
 import com.designpattern.basic.visitor.VisitorPatternActivity;
+import com.designpattern.multithread.visitor.SingleThreadExecutionPattern;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +65,9 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
     private View mProxyPattern;
     private View mCommandPattern;
     private View mInterpreterPattern;
+
+    // multi thread
+    private View mSingleThreadExecutionPattern;
 
     /*Multi Thread Design Pattern*/
     @Override
@@ -104,6 +108,9 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
         mProxyPattern = makeInstance(R.id.proxy);
         mCommandPattern = makeInstance(R.id.command);
         mInterpreterPattern = makeInstance(R.id.interpreter);
+
+        /*Multi Thread Design Pattern*/
+        mSingleThreadExecutionPattern = makeInstance(R.id.SingleThreadExecutionPattern);
     }
 
     private View makeInstance(int id) {
@@ -197,6 +204,9 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
                 intent.setClass(mContext, InterpreterPatternActivity.class);
                 break;
             /*Multi Thread Design Pattern*/
+            case R.id.SingleThreadExecutionPattern:
+                intent.setClass(mContext, SingleThreadExecutionPattern.class);
+                break;
 
             default:
                 break;
