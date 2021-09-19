@@ -16,19 +16,19 @@ public class CommandPatternActivity extends AbsBaseDesignPatternActivity {
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("命令を一つのクラスとして表現する方式");
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("命令が持つべき情報に注意、持たせる情報によって行える幅も増える");
         strings.add("履歴の保存もかのう");
-        super.merit(strings);
+        return strings;
     }
 }

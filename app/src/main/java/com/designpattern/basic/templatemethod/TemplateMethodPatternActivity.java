@@ -14,19 +14,19 @@ public class TemplateMethodPatternActivity extends AbsBaseDesignPatternActivity 
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("スーパークラスで処理の枠組みを定め、サブクラスでその具体的内容を定める方式");
         strings.add("いわゆるオブジェクト指向のポリフォーリズム");
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("ロジックの共通化ができる");
-        super.merit(strings);
+        return strings;
     }
 }

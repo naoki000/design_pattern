@@ -16,18 +16,18 @@ public class ObserverPatternActivity extends AbsBaseDesignPatternActivity {
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("状態変化に応じた処理を記述する方式");
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("observerは必ずインタフェースを作るそれをGeneretorはそれを使ってobserverさせることで、交換可能性を上げることができる");
-        super.merit(strings);
+        return strings;
     }
 }

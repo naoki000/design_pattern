@@ -16,20 +16,20 @@ public class FacadePatternActivity extends AbsBaseDesignPatternActivity {
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("複雑化した詳細をまとめ、高レベルなAPIを提供する");
         strings.add("窓口となり、複雑なクラスを正しい順番で呼ぶようにしてくれるメソッド");
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("複雑なものを単純化したいときに使える");
         strings.add("APIを少なくすること");
-        super.merit(strings);
+        return strings;
     }
 }

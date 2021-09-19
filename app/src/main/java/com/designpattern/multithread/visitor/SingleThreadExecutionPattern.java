@@ -16,18 +16,18 @@ public class SingleThreadExecutionPattern extends AbsBaseDesignPatternActivity {
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("一つのthreadしか実行できないよう制限をかける方法");
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("他のthreadに実行を邪魔されない");
-        super.merit(strings);
+        return strings;
     }
 }

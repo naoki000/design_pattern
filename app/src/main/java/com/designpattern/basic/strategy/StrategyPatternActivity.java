@@ -16,20 +16,20 @@ public class StrategyPatternActivity extends AbsBaseDesignPatternActivity {
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("アルゴリズムを切りかえ、同じ問題を別の方法で解くのを容易にするパターン");
         strings.add("委譲先を切り替えてアルゴリズムを切り替える");
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("Strategyの実装を増やせばアルゴリズムを切りかえが容易");
         strings.add("実行中に切り替えることもできる");
-        super.merit(strings);
+        return strings;
     }
 }

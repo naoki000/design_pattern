@@ -16,21 +16,21 @@ public class FlyweightPatternActivity extends AbsBaseDesignPatternActivity {
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("インスタンスをできるだけ共有させて無駄に生成しないようにする方式");
         strings.add("オブジェクトのメモリ使用量を減らすことができる");
         strings.add("再利用できるインスタンスが既に作ってあった場合はそれを利用する");
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("一つを変更するとその他すべてに変更できる。何を共有するべきかを考える必要がある");
         strings.add("共有させるデータはintrinsicなデータ（場所や状況によって依存しない、常に一定のデータ）を選ぶ");
-        super.merit(strings);
+        return strings;
     }
 }

@@ -16,7 +16,7 @@ public class StatePatternActivity extends AbsBaseDesignPatternActivity {
     }
 
     @Override
-    protected void serDescription() {
+    protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("状態をクラスとして表現し、クラスを切り替えることで、状態の変化を表す方式");
@@ -25,14 +25,14 @@ public class StatePatternActivity extends AbsBaseDesignPatternActivity {
         strings.add("このように状態に依存した処理を表現する");
         strings.add("状態遷移は誰が管理するべきかを注意する、これによって依存度が高くなるクラスがわかれるため、だれが状態を遷移するべきかを考える");
 
-        super.description(strings);
+        return strings;
     }
 
     @Override
-    protected void setMerit() {
+    protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
         strings.add("新しい状態を追加するのが簡単");
-        super.merit(strings);
+        return strings;
     }
 }

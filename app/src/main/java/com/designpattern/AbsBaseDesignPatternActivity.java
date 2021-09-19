@@ -8,13 +8,19 @@ import java.util.ArrayList;
 import androidx.appcompat.app.AppCompatActivity;
 
 public abstract class AbsBaseDesignPatternActivity extends AppCompatActivity {
+
+    private ArrayList<String> mSummaryDesc;
+    private ArrayList<String> mMeritDesc;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.design_pattern_base);
         setTitle(getClass().getSimpleName());
-        serDescription();
-        setMerit();
+        mSummaryDesc = summaryDesc();
+        mMeritDesc = meritDesc();
+        setSummaryDesc();
+        setMeritDesc();
         mMainCode = makeMainCode();
         startCode();
     }
@@ -23,22 +29,22 @@ public abstract class AbsBaseDesignPatternActivity extends AppCompatActivity {
 
     protected abstract AbsMainCode makeMainCode();
 
-    protected abstract void serDescription();
+    protected abstract ArrayList<String> summaryDesc();
 
-    protected abstract void setMerit();
+    protected abstract ArrayList<String> meritDesc();
 
     protected void startCode() {
         mMainCode.main();
     }
 
-    protected void description(ArrayList<String> description) {
+    private void setSummaryDesc() {
         TextView textView = findViewById(R.id.description);
-        textView.setText(getStrings(description));
+        textView.setText(getStrings(mSummaryDesc));
     }
 
-    protected void merit(ArrayList<String> description) {
+    private void setMeritDesc() {
         TextView textView = findViewById(R.id.merit);
-        textView.setText(getStrings(description));
+        textView.setText(getStrings(mMeritDesc));
     }
 
     protected String getStrings(ArrayList<String> strings) {
