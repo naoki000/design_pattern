@@ -28,7 +28,8 @@ import com.designpattern.basic.state.StatePatternActivity;
 import com.designpattern.basic.strategy.StrategyPatternActivity;
 import com.designpattern.basic.templatemethod.TemplateMethodPatternActivity;
 import com.designpattern.basic.visitor.VisitorPatternActivity;
-import com.designpattern.multithread.singlethread.SingleThreadExecutionPattern;
+import com.designpattern.multithread.immutable.ImmutablePatternActivity;
+import com.designpattern.multithread.singlethread.SingleThreadExecutionPatternActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,6 +68,7 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
 
     // multi thread
     private View mSingleThreadExecutionPattern;
+    private View mImmutablePattern;
     private View mBeforeAfterPattern;
 
     /*Multi Thread Design Pattern*/
@@ -111,6 +113,7 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
 
         /*Multi Thread Design Pattern*/
         mSingleThreadExecutionPattern = makeInstance(R.id.SingleThreadExecutionPattern);
+        mImmutablePattern = makeInstance(R.id.ImmutablePattern);
     }
 
     private View makeInstance(int id) {
@@ -205,7 +208,10 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
                 break;
             /*Multi Thread Design Pattern*/
             case R.id.SingleThreadExecutionPattern:
-                intent.setClass(mContext, SingleThreadExecutionPattern.class);
+                intent.setClass(mContext, SingleThreadExecutionPatternActivity.class);
+                break;
+            case R.id.ImmutablePattern:
+                intent.setClass(mContext, ImmutablePatternActivity.class);
                 break;
 
             default:

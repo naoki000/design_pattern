@@ -42,7 +42,8 @@
         <activity android:name=".basic.interpreter.InterpreterPatternActivity"/>
 
         <!--Multi thread-->
-        <activity android:name=".multithread.singlethread.SingleThreadExecutionPattern"/>
+        <activity android:name=".multithread.singlethread.SingleThreadExecutionPatternActivity"/>
+        <activity android:name=".multithread.immutable.ImmutablePatternActivity"/>
 
     </application>
 

@@ -6,8 +6,8 @@ import com.designpattern.multithread.singlethread.code.Main;
 
 import java.util.ArrayList;
 
-public class SingleThreadExecutionPattern extends AbsBaseDesignPatternActivity {
-    private static String TAG = SingleThreadExecutionPattern.class.getSimpleName();
+public class SingleThreadExecutionPatternActivity extends AbsBaseDesignPatternActivity {
+    private static String TAG = SingleThreadExecutionPatternActivity.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {
