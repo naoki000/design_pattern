@@ -41,6 +41,9 @@
         <activity android:name=".basic.command.CommandPatternActivity"/>
         <activity android:name=".basic.interpreter.InterpreterPatternActivity"/>
 
+        <!--Multi thread-->
+        <activity android:name=".multithread.singlethread.SingleThreadExecutionPattern"/>
+
     </application>
 
 </manifest>

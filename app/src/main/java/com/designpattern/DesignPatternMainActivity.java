@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.designpattern.R;
 import com.designpattern.basic.abstractfactory.AbstractFactoryPatternActivity;
 import com.designpattern.basic.adapter.AdapterPatternActivity;
 import com.designpattern.basic.bridge.BridgePatternActivity;
@@ -29,7 +28,7 @@ import com.designpattern.basic.state.StatePatternActivity;
 import com.designpattern.basic.strategy.StrategyPatternActivity;
 import com.designpattern.basic.templatemethod.TemplateMethodPatternActivity;
 import com.designpattern.basic.visitor.VisitorPatternActivity;
-import com.designpattern.multithread.visitor.SingleThreadExecutionPattern;
+import com.designpattern.multithread.singlethread.SingleThreadExecutionPattern;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,6 +67,7 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
 
     // multi thread
     private View mSingleThreadExecutionPattern;
+    private View mBeforeAfterPattern;
 
     /*Multi Thread Design Pattern*/
     @Override
