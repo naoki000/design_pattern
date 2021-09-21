@@ -39,37 +39,37 @@ import androidx.appcompat.app.AppCompatActivity;
 public class DesignPatternMainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Context mContext;
-    private List<View> mDesignPatternList;
+    private List<ActivityItem> mDesignPatternItemList;
 
     /*Basic Design Pattern*/
-    private View mIteratorPattern;
-    private View mAdapterPattern;
-    private View mTemplateMethodPattern;
-    private View mFactoryMethodPattern;
-    private View mSingletonPattern;
-    private View mPrototypePattern;
-    private View mBuilderPattern;
-    private View mAbstractFactoryPattern;
-    private View mBridgePattern;
-    private View mStrategyPattern;
-    private View mCompositePattern;
-    private View mDecoratorPattern;
-    private View mVisitorPattern;
-    private View mChainOfResponsibilityPattern;
-    private View mFacadePattern;
-    private View mMediatorPattern;
-    private View mObserverPattern;
-    private View mMementoPattern;
-    private View mStatePattern;
-    private View mFlyWeightPattern;
-    private View mProxyPattern;
-    private View mCommandPattern;
-    private View mInterpreterPattern;
+    private ActivityItem mIteratorPattern;
+    private ActivityItem mAdapterPattern;
+    private ActivityItem mTemplateMethodPattern;
+    private ActivityItem mFactoryMethodPattern;
+    private ActivityItem mSingletonPattern;
+    private ActivityItem mPrototypePattern;
+    private ActivityItem mBuilderPattern;
+    private ActivityItem mAbstractFactoryPattern;
+    private ActivityItem mBridgePattern;
+    private ActivityItem mStrategyPattern;
+    private ActivityItem mCompositePattern;
+    private ActivityItem mDecoratorPattern;
+    private ActivityItem mVisitorPattern;
+    private ActivityItem mChainOfResponsibilityPattern;
+    private ActivityItem mFacadePattern;
+    private ActivityItem mMediatorPattern;
+    private ActivityItem mObserverPattern;
+    private ActivityItem mMementoPattern;
+    private ActivityItem mStatePattern;
+    private ActivityItem mFlyWeightPattern;
+    private ActivityItem mProxyPattern;
+    private ActivityItem mCommandPattern;
+    private ActivityItem mInterpreterPattern;
 
     // multi thread
-    private View mSingleThreadExecutionPattern;
-    private View mImmutablePattern;
-    private View mBeforeAfterPattern;
+    private ActivityItem mSingleThreadExecutionPattern;
+    private ActivityItem mImmutablePattern;
+    private ActivityItem mBeforeAfterPattern;
 
     /*Multi Thread Design Pattern*/
     @Override
@@ -77,7 +77,7 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
         super.onCreate(savedInstanceState);
         mContext = getApplicationContext();
         setContentView(R.layout.activity_main);
-        mDesignPatternList = new ArrayList<>();
+        mDesignPatternItemList = new ArrayList<>();
 
         setBasicDesignPattern();
         setMultiThreadDesignPattern();
@@ -87,136 +87,77 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
     }
 
     private void setBasicDesignPattern() {
-        mIteratorPattern = makeInstance(R.id.iterator);
-        mAdapterPattern = makeInstance(R.id.adapter);
-        mTemplateMethodPattern = makeInstance(R.id.template_method);
-        mFactoryMethodPattern = makeInstance(R.id.factory_method);
-        mSingletonPattern = makeInstance(R.id.singleton);
-        mPrototypePattern = makeInstance(R.id.prototype);
-        mBuilderPattern = makeInstance(R.id.builder);
-        mAbstractFactoryPattern = makeInstance(R.id.abstract_factory);
-        mBridgePattern = makeInstance(R.id.bridge);
-        mStrategyPattern = makeInstance(R.id.strategy);
-        mCompositePattern = makeInstance(R.id.composite);
-        mDecoratorPattern = makeInstance(R.id.decorator);
-        mVisitorPattern = makeInstance(R.id.visitor);
-        mChainOfResponsibilityPattern = makeInstance(R.id.chain_of_responsibility);
-        mFacadePattern = makeInstance(R.id.facade);
-        mMediatorPattern = makeInstance(R.id.mediator);
-        mObserverPattern = makeInstance(R.id.observer);
-        mMementoPattern = makeInstance(R.id.memento);
-        mStatePattern = makeInstance(R.id.state);
-        mFlyWeightPattern = makeInstance(R.id.flyweight);
-        mProxyPattern = makeInstance(R.id.proxy);
-        mCommandPattern = makeInstance(R.id.command);
-        mInterpreterPattern = makeInstance(R.id.interpreter);
-
-        /*Multi Thread Design Pattern*/
-        mSingleThreadExecutionPattern = makeInstance(R.id.SingleThreadExecutionPattern);
-        mImmutablePattern = makeInstance(R.id.ImmutablePattern);
-    }
-
-    private View makeInstance(int id) {
-        View view = findViewById(id);
-        mDesignPatternList.add(view);
-        return view;
+        mIteratorPattern = makeInstance(R.id.iterator, IteratorPatternActivity.class);
+        mAdapterPattern = makeInstance(R.id.adapter, AdapterPatternActivity.class);
+        mTemplateMethodPattern = makeInstance(R.id.template_method,
+                TemplateMethodPatternActivity.class);
+        mFactoryMethodPattern = makeInstance(R.id.factory_method, FactoryMethodPatternActivity.class);
+        mSingletonPattern = makeInstance(R.id.singleton, SingletonPatternActivity.class);
+        mPrototypePattern = makeInstance(R.id.prototype, PrototypePatternActivity.class);
+        mBuilderPattern = makeInstance(R.id.builder, BuilderPatternActivity.class);
+        mAbstractFactoryPattern = makeInstance(R.id.abstract_factory,
+                AbstractFactoryPatternActivity.class);
+        mBridgePattern = makeInstance(R.id.bridge, BridgePatternActivity.class);
+        mStrategyPattern = makeInstance(R.id.strategy, StrategyPatternActivity.class);
+        mCompositePattern = makeInstance(R.id.composite, CompositePatternActivity.class);
+        mDecoratorPattern = makeInstance(R.id.decorator, DecoratorPatternActivity.class);
+        mVisitorPattern = makeInstance(R.id.visitor, VisitorPatternActivity.class);
+        mChainOfResponsibilityPattern = makeInstance(R.id.chain_of_responsibility,
+                ChainOfResponsibilityPatternActivity.class);
+        mFacadePattern = makeInstance(R.id.facade, FacadePatternActivity.class);
+        mMediatorPattern = makeInstance(R.id.mediator, MediatorPatternActivity.class);
+        mObserverPattern = makeInstance(R.id.observer, ObserverPatternActivity.class);
+        mMementoPattern = makeInstance(R.id.memento, MementoPatternActivity.class);
+        mStatePattern = makeInstance(R.id.state, StatePatternActivity.class);
+        mFlyWeightPattern = makeInstance(R.id.flyweight, FlyweightPatternActivity.class);
+        mProxyPattern = makeInstance(R.id.proxy, ProxyPatternActivity.class);
+        mCommandPattern = makeInstance(R.id.command, CommandPatternActivity.class);
+        mInterpreterPattern = makeInstance(R.id.interpreter, InterpreterPatternActivity.class);
     }
 
     private void setMultiThreadDesignPattern() {
+        /*Multi Thread Design Pattern*/
+        mSingleThreadExecutionPattern = makeInstance(R.id.SingleThreadExecutionPattern, SingletonPatternActivity.class);
+        mImmutablePattern = makeInstance(R.id.ImmutablePattern, ImmutablePatternActivity.class);
+    }
+
+    private ActivityItem makeInstance(int id, Class launchClass) {
+        ActivityItem activityItem = new ActivityItem(id, launchClass);
+        mDesignPatternItemList.add(activityItem);
+        return activityItem;
     }
 
     private void setListener() {
-        for (View view : mDesignPatternList) {
-            view.setOnClickListener(this);
+        for (ActivityItem activityItem : mDesignPatternItemList) {
+            activityItem.mView.setOnClickListener(this);
         }
     }
 
     @Override
     public void onClick(View view) {
         Intent intent = new Intent();
-
-        switch (view.getId()) {
-            /*Basic Design Pattern*/
-            case R.id.iterator:
-                intent.setClass(mContext, IteratorPatternActivity.class);
-                break;
-            case R.id.adapter:
-                intent.setClass(mContext, AdapterPatternActivity.class);
-                break;
-            case R.id.template_method:
-                intent.setClass(mContext, TemplateMethodPatternActivity.class);
-                break;
-            case R.id.factory_method:
-                intent.setClass(mContext, FactoryMethodPatternActivity.class);
-                break;
-            case R.id.singleton:
-                intent.setClass(mContext, SingletonPatternActivity.class);
-                break;
-            case R.id.prototype:
-                intent.setClass(mContext, PrototypePatternActivity.class);
-                break;
-            case R.id.builder:
-                intent.setClass(mContext, BuilderPatternActivity.class);
-                break;
-            case R.id.abstract_factory:
-                intent.setClass(mContext, AbstractFactoryPatternActivity.class);
-                break;
-            case R.id.bridge:
-                intent.setClass(mContext, BridgePatternActivity.class);
-                break;
-            case R.id.strategy:
-                intent.setClass(mContext, StrategyPatternActivity.class);
-                break;
-            case R.id.composite:
-                intent.setClass(mContext, CompositePatternActivity.class);
-                break;
-            case R.id.decorator:
-                intent.setClass(mContext, DecoratorPatternActivity.class);
-                break;
-            case R.id.visitor:
-                intent.setClass(mContext, VisitorPatternActivity.class);
-                break;
-            case R.id.chain_of_responsibility:
-                intent.setClass(mContext, ChainOfResponsibilityPatternActivity.class);
-                break;
-            case R.id.facade:
-                intent.setClass(mContext, FacadePatternActivity.class);
-                break;
-            case R.id.mediator:
-                intent.setClass(mContext, MediatorPatternActivity.class);
-                break;
-            case R.id.observer:
-                intent.setClass(mContext, ObserverPatternActivity.class);
-                break;
-            case R.id.memento:
-                intent.setClass(mContext, MementoPatternActivity.class);
-                break;
-            case R.id.state:
-                intent.setClass(mContext, StatePatternActivity.class);
-                break;
-            case R.id.flyweight:
-                intent.setClass(mContext, FlyweightPatternActivity.class);
-                break;
-            case R.id.proxy:
-                intent.setClass(mContext, ProxyPatternActivity.class);
-                break;
-            case R.id.command:
-                intent.setClass(mContext, CommandPatternActivity.class);
-                break;
-            case R.id.interpreter:
-                intent.setClass(mContext, InterpreterPatternActivity.class);
-                break;
-            /*Multi Thread Design Pattern*/
-            case R.id.SingleThreadExecutionPattern:
-                intent.setClass(mContext, SingleThreadExecutionPatternActivity.class);
-                break;
-            case R.id.ImmutablePattern:
-                intent.setClass(mContext, ImmutablePatternActivity.class);
-                break;
-
-            default:
-                break;
+        for (ActivityItem activityItem : mDesignPatternItemList) {
+            if (view.getId() == activityItem.mId) {
+                intent.setClass(mContext, activityItem.mLaunchClass);
+            }
         }
         startActivity(intent);
+    }
+
+    private class ActivityItem {
+        View mView;
+        int mId;
+        Class mLaunchClass;
+
+        ActivityItem(int id, Class launchClass) {
+            mId = id;
+            mView = makeViewInstance(id);
+            mLaunchClass = launchClass;
+        }
+
+        private View makeViewInstance(int id) {
+            View view = findViewById(id);
+            return view;
+        }
     }
 }
