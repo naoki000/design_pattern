@@ -249,9 +249,35 @@
                 android:text="Immutable"
                 android:textAllCaps="false"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/command"
-/>
+                app:layout_constraintTop_toBottomOf="@+id/command" />
 
+            <Button
+                android:id="@+id/GuardedSuspensionPatternActivity"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="GuardedSuspension"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toStartOf="@id/ImmutablePattern"
+                app:layout_constraintStart_toEndOf="@id/decorator"
+                app:layout_constraintTop_toBottomOf="@+id/interpreter" />
+
+            <Button
+                android:id="@+id/BalkingPattern"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="Balking"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SingleThreadExecutionPattern" />
+
+            <Button
+                android:id="@+id/ProducerConsumerPattern"
+                android:layout_width="136dp"
+                android:layout_height="100dp"
+                android:text="ProducerConsumer"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ImmutablePattern" />
 
             <!--    <Button-->
             <!--        android:id="@+id/a"-->

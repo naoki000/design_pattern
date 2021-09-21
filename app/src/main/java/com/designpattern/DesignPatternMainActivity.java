@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.designpattern.basic.abstractfactory.AbstractFactoryPatternActivity;
 import com.designpattern.basic.adapter.AdapterPatternActivity;
 import com.designpattern.basic.bridge.BridgePatternActivity;
@@ -28,13 +30,14 @@ import com.designpattern.basic.state.StatePatternActivity;
 import com.designpattern.basic.strategy.StrategyPatternActivity;
 import com.designpattern.basic.templatemethod.TemplateMethodPatternActivity;
 import com.designpattern.basic.visitor.VisitorPatternActivity;
+import com.designpattern.multithread.balking.BalkingPatternActivity;
+import com.designpattern.multithread.guardedsuspension.GuardedSuspensionPatternActivity;
 import com.designpattern.multithread.immutable.ImmutablePatternActivity;
+import com.designpattern.multithread.producerconsumer.ProducerConsumerPatternActivity;
 import com.designpattern.multithread.singlethread.SingleThreadExecutionPatternActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class DesignPatternMainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -69,6 +72,9 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
     // multi thread
     private ActivityItem mSingleThreadExecutionPattern;
     private ActivityItem mImmutablePattern;
+    private ActivityItem mGuardedSuspensionPattern;
+    private ActivityItem mBalkingPattern;
+    private ActivityItem mProducerConsumerPattern;
     private ActivityItem mBeforeAfterPattern;
 
     /*Multi Thread Design Pattern*/
@@ -120,6 +126,11 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
         mSingleThreadExecutionPattern = makeInstance(R.id.SingleThreadExecutionPattern,
                 SingleThreadExecutionPatternActivity.class);
         mImmutablePattern = makeInstance(R.id.ImmutablePattern, ImmutablePatternActivity.class);
+        mGuardedSuspensionPattern = makeInstance(R.id.GuardedSuspensionPatternActivity,
+                GuardedSuspensionPatternActivity.class);
+        mBalkingPattern = makeInstance(R.id.BalkingPattern, BalkingPatternActivity.class);
+        mProducerConsumerPattern = makeInstance(R.id.ProducerConsumerPattern,
+                ProducerConsumerPatternActivity.class);
     }
 
     private ActivityItem makeInstance(int id, Class launchClass) {

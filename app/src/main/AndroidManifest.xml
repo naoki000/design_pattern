@@ -44,6 +44,9 @@
         <!--Multi thread-->
         <activity android:name=".multithread.singlethread.SingleThreadExecutionPatternActivity"/>
         <activity android:name=".multithread.immutable.ImmutablePatternActivity"/>
+        <activity android:name=".multithread.guardedsuspension.GuardedSuspensionPatternActivity"/>
+        <activity android:name=".multithread.balking.BalkingPatternActivity"/>
+        <activity android:name=".multithread.producerconsumer.ProducerConsumerPatternActivity"/>
 
     </application>
 
