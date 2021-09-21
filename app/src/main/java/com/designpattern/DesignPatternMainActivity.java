@@ -117,7 +117,8 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
 
     private void setMultiThreadDesignPattern() {
         /*Multi Thread Design Pattern*/
-        mSingleThreadExecutionPattern = makeInstance(R.id.SingleThreadExecutionPattern, SingletonPatternActivity.class);
+        mSingleThreadExecutionPattern = makeInstance(R.id.SingleThreadExecutionPattern,
+                SingleThreadExecutionPatternActivity.class);
         mImmutablePattern = makeInstance(R.id.ImmutablePattern, ImmutablePatternActivity.class);
     }
 
@@ -145,9 +146,9 @@ public class DesignPatternMainActivity extends AppCompatActivity implements View
     }
 
     private class ActivityItem {
-        View mView;
-        int mId;
-        Class mLaunchClass;
+        private final View mView;
+        private final int mId;
+        private final Class mLaunchClass;
 
         ActivityItem(int id, Class launchClass) {
             mId = id;
