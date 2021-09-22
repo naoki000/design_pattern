@@ -47,6 +47,13 @@
         <activity android:name=".multithread.guardedsuspension.GuardedSuspensionPattern"/>
         <activity android:name=".multithread.balking.BalkingPattern"/>
         <activity android:name=".multithread.producerconsumer.ProducerConsumerPattern"/>
+        <activity android:name=".multithread.readwritelock.ReadWriteLockPattern"/>
+        <activity android:name=".multithread.threadpermessage.ThreadPerMessagePattern"/>
+        <activity android:name=".multithread.workerthread.WorkerThreadPattern"/>
+        <activity android:name=".multithread.future.FuturePattern"/>
+        <activity android:name=".multithread.twophrasetermination.TwoPhaseTerminationPattern"/>
+        <activity android:name=".multithread.threadspecificstorage.ThreadSpecificStoragePattern"/>
+        <activity android:name=".multithread.activeobject.ActiveObjectPattern"/>
 
     </application>
 

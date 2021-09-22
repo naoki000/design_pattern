@@ -30,11 +30,18 @@ import com.designpattern.basic.state.StatePattern;
 import com.designpattern.basic.strategy.StrategyPattern;
 import com.designpattern.basic.templatemethod.TemplateMethodPattern;
 import com.designpattern.basic.visitor.VisitorPattern;
+import com.designpattern.multithread.activeobject.ActiveObjectPattern;
 import com.designpattern.multithread.balking.BalkingPattern;
+import com.designpattern.multithread.future.FuturePattern;
 import com.designpattern.multithread.guardedsuspension.GuardedSuspensionPattern;
 import com.designpattern.multithread.immutable.ImmutablePattern;
 import com.designpattern.multithread.producerconsumer.ProducerConsumerPattern;
+import com.designpattern.multithread.readwritelock.ReadWriteLockPattern;
 import com.designpattern.multithread.singlethread.SingleThreadExecutionPattern;
+import com.designpattern.multithread.threadpermessage.ThreadPerMessagePattern;
+import com.designpattern.multithread.threadspecificstorage.ThreadSpecificStoragePattern;
+import com.designpattern.multithread.twophrasetermination.TwoPhaseTerminationPattern;
+import com.designpattern.multithread.workerthread.WorkerThreadPattern;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +83,13 @@ public class DesignPatternMainActivity extends AppCompatActivity {
     private PatternItem mGuardedSuspensionPattern;
     private PatternItem mBalkingPattern;
     private PatternItem mProducerConsumerPattern;
+    private PatternItem mReadWriteLockPattern;
+    private PatternItem mThreadPerMessagePatternPattern;
+    private PatternItem mWorkerThreadPattern;
+    private PatternItem mFuturePattern;
+    private PatternItem mTwoPhaseTerminationPattern;
+    private PatternItem mThreadSpecificStoragePattern;
+    private PatternItem mActiveObjectPattern;
     private PatternItem mBeforeAfterPattern;
 
     /*Multi Thread Design Pattern*/
@@ -125,6 +139,13 @@ public class DesignPatternMainActivity extends AppCompatActivity {
         mGuardedSuspensionPattern = makeInstance(GuardedSuspensionPattern.class);
         mBalkingPattern = makeInstance(BalkingPattern.class);
         mProducerConsumerPattern = makeInstance(ProducerConsumerPattern.class);
+        mReadWriteLockPattern = makeInstance(ReadWriteLockPattern.class);
+        mThreadPerMessagePatternPattern = makeInstance(ThreadPerMessagePattern.class);
+        mWorkerThreadPattern = makeInstance(WorkerThreadPattern.class);
+        mFuturePattern = makeInstance(FuturePattern.class);
+        mTwoPhaseTerminationPattern = makeInstance(TwoPhaseTerminationPattern.class);
+        mThreadSpecificStoragePattern = makeInstance(ThreadSpecificStoragePattern.class);
+        mActiveObjectPattern = makeInstance(ActiveObjectPattern.class);
     }
 
     private PatternItem makeInstance(Class launchClass) {
