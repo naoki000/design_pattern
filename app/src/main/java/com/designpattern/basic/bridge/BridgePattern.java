@@ -6,8 +6,8 @@ import com.designpattern.basic.bridge.code.Main;
 
 import java.util.ArrayList;
 
-public class BridgePatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = BridgePatternActivity.class.getSimpleName();
+public class BridgePattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = BridgePattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

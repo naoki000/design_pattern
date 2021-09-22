@@ -6,8 +6,8 @@ import com.designpattern.basic.composite.code.Main;
 
 import java.util.ArrayList;
 
-public class CompositePatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = CompositePatternActivity.class.getSimpleName();
+public class CompositePattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = CompositePattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

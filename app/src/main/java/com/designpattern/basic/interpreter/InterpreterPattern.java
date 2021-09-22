@@ -6,8 +6,8 @@ import com.designpattern.basic.interpreter.code.Main;
 
 import java.util.ArrayList;
 
-public class InterpreterPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = InterpreterPatternActivity.class.getSimpleName();
+public class InterpreterPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = InterpreterPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

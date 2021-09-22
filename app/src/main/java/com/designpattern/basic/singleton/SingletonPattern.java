@@ -1,13 +1,13 @@
-package com.designpattern.basic.command;
+package com.designpattern.basic.singleton;
 
 import com.designpattern.AbsBaseDesignPatternActivity;
 import com.designpattern.AbsMainCode;
-import com.designpattern.basic.command.code.Main;
+import com.designpattern.basic.singleton.code.Main;
 
 import java.util.ArrayList;
 
-public class CommandPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = CommandPatternActivity.class.getSimpleName();
+public class SingletonPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = SingletonPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {
@@ -19,7 +19,7 @@ public class CommandPatternActivity extends AbsBaseDesignPatternActivity {
     protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
-        strings.add("命令を一つのクラスとして表現する方式");
+        strings.add("そのクラスのインスタンスが絶対に一つしかそんざいしなことを保証する方法");
         return strings;
     }
 
@@ -27,8 +27,7 @@ public class CommandPatternActivity extends AbsBaseDesignPatternActivity {
     protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
-        strings.add("命令が持つべき情報に注意、持たせる情報によって行える幅も増える");
-        strings.add("履歴の保存もかのう");
+        strings.add("このパターンはAbstract Factory, Builder, Facade, Prototypeのパターンでよく使われる");
         return strings;
     }
 }

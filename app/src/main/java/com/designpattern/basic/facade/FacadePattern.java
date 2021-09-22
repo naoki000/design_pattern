@@ -6,8 +6,8 @@ import com.designpattern.basic.facade.code.Main;
 
 import java.util.ArrayList;
 
-public class FacadePatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = FacadePatternActivity.class.getSimpleName();
+public class FacadePattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = FacadePattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

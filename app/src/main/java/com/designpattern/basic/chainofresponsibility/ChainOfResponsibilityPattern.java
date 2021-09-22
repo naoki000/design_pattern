@@ -6,8 +6,8 @@ import com.designpattern.basic.chainofresponsibility.code.Main;
 
 import java.util.ArrayList;
 
-public class ChainOfResponsibilityPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = ChainOfResponsibilityPatternActivity.class.getSimpleName();
+public class ChainOfResponsibilityPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = ChainOfResponsibilityPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

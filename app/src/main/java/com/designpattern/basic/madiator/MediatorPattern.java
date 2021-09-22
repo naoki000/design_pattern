@@ -6,8 +6,8 @@ import com.designpattern.basic.madiator.code.Main;
 
 import java.util.ArrayList;
 
-public class MediatorPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = MediatorPatternActivity.class.getSimpleName();
+public class MediatorPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = MediatorPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

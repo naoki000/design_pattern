@@ -1,13 +1,13 @@
-package com.designpattern.basic.observer;
+package com.designpattern.basic.memento;
 
 import com.designpattern.AbsBaseDesignPatternActivity;
 import com.designpattern.AbsMainCode;
-import com.designpattern.basic.observer.code.Main;
+import com.designpattern.basic.memento.code.Main;
 
 import java.util.ArrayList;
 
-public class ObserverPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = ObserverPatternActivity.class.getSimpleName();
+public class MementoPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = MementoPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {
@@ -19,7 +19,7 @@ public class ObserverPatternActivity extends AbsBaseDesignPatternActivity {
     protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
-        strings.add("状態変化に応じた処理を記述する方式");
+        strings.add("カプセル化の破壊をすることなくインスタンスの状態を保存、復元を行う方式");
         return strings;
     }
 
@@ -27,7 +27,7 @@ public class ObserverPatternActivity extends AbsBaseDesignPatternActivity {
     protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
-        strings.add("observerは必ずインタフェースを作るそれをGeneretorはそれを使ってobserverさせることで、交換可能性を上げることができる");
+        strings.add("");
         return strings;
     }
 }

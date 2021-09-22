@@ -6,308 +6,322 @@
     android:layout_height="match_parent"
     tools:context=".DesignPatternMainActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/home"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/iterator"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="iterator"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/adapter"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Adapter"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/template_method"
-                app:layout_constraintStart_toEndOf="@id/iterator"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/template_method"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Template Method"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/factory_method"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="Factory Method"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iterator" />
-
-            <Button
-                android:id="@+id/singleton"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Singleton"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/prototype"
-                app:layout_constraintStart_toEndOf="@id/factory_method"
-                app:layout_constraintTop_toBottomOf="@+id/adapter" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp" />
+    </LinearLayout>
 
 
-            <Button
-                android:id="@+id/prototype"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Prototype"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/template_method" />
+    <!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-            <Button
-                android:id="@+id/builder"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="Builder"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/factory_method" />
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/home"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
 
-            <Button
-                android:id="@+id/abstract_factory"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Abstract Factory"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/bridge"
-                app:layout_constraintStart_toEndOf="@id/builder"
-                app:layout_constraintTop_toBottomOf="@+id/singleton" />
+<!--            <Button-->
+<!--                android:id="@+id/iterator"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="iterator"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-            <Button
-                android:id="@+id/bridge"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Bridge"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/prototype" />
+<!--            <Button-->
+<!--                android:id="@+id/adapter"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Adapter"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/template_method"-->
+<!--                app:layout_constraintStart_toEndOf="@id/iterator"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-            <Button
-                android:id="@+id/strategy"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="Strategy"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/builder" />
+<!--            <Button-->
+<!--                android:id="@+id/template_method"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Template Method"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
 
-            <Button
-                android:id="@+id/composite"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Composite"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/strategy"
-                app:layout_constraintStart_toEndOf="@id/decorator"
-                app:layout_constraintTop_toBottomOf="@+id/abstract_factory" />
+<!--            <Button-->
+<!--                android:id="@+id/factory_method"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Factory Method"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/iterator" />-->
 
-            <Button
-                android:id="@+id/decorator"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Decorator"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/builder" />
+<!--            <Button-->
+<!--                android:id="@+id/singleton"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Singleton"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/prototype"-->
+<!--                app:layout_constraintStart_toEndOf="@id/factory_method"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/adapter" />-->
 
-            <Button
-                android:id="@+id/visitor"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="Visitor"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/strategy" />
 
-            <Button
-                android:id="@+id/chain_of_responsibility"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Chain Of Responsibility"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/strategy"
-                app:layout_constraintStart_toEndOf="@id/decorator"
-                app:layout_constraintTop_toBottomOf="@+id/composite" />
+<!--            <Button-->
+<!--                android:id="@+id/prototype"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Prototype"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/template_method" />-->
 
-            <Button
-                android:id="@+id/facade"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Facade"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/decorator" />
+<!--            <Button-->
+<!--                android:id="@+id/builder"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Builder"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/factory_method" />-->
 
-            <Button
-                android:id="@+id/mediator"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="Mediator"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/visitor" />
+<!--            <Button-->
+<!--                android:id="@+id/abstract_factory"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Abstract Factory"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/bridge"-->
+<!--                app:layout_constraintStart_toEndOf="@id/builder"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/singleton" />-->
 
-            <Button
-                android:id="@+id/observer"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Observer"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/strategy"
-                app:layout_constraintStart_toEndOf="@id/decorator"
-                app:layout_constraintTop_toBottomOf="@+id/chain_of_responsibility" />
+<!--            <Button-->
+<!--                android:id="@+id/bridge"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Bridge"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/prototype" />-->
 
-            <Button
-                android:id="@+id/memento"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Memento"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/facade" />
+<!--            <Button-->
+<!--                android:id="@+id/strategy"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Strategy"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/builder" />-->
 
-            <Button
-                android:id="@+id/state"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="State"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mediator" />
+<!--            <Button-->
+<!--                android:id="@+id/composite"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Composite"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/strategy"-->
+<!--                app:layout_constraintStart_toEndOf="@id/decorator"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/abstract_factory" />-->
 
-            <Button
-                android:id="@+id/flyweight"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Flyweight"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/strategy"
-                app:layout_constraintStart_toEndOf="@id/decorator"
-                app:layout_constraintTop_toBottomOf="@+id/observer" />
+<!--            <Button-->
+<!--                android:id="@+id/decorator"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Decorator"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/builder" />-->
 
-            <Button
-                android:id="@+id/proxy"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Proxy"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/memento" />
+<!--            <Button-->
+<!--                android:id="@+id/visitor"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Visitor"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/strategy" />-->
 
-            <Button
-                android:id="@+id/command"
-                android:layout_width="135dp"
-                android:layout_height="100dp"
-                android:text="Command"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/state" />
+<!--            <Button-->
+<!--                android:id="@+id/chain_of_responsibility"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Chain Of Responsibility"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/strategy"-->
+<!--                app:layout_constraintStart_toEndOf="@id/decorator"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/composite" />-->
 
-            <Button
-                android:id="@+id/interpreter"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Interpreter"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/strategy"
-                app:layout_constraintStart_toEndOf="@id/decorator"
-                app:layout_constraintTop_toBottomOf="@+id/flyweight" />
+<!--            <Button-->
+<!--                android:id="@+id/facade"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Facade"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/decorator" />-->
 
-<!--            /*Multi Thread Design Pattern*/-->
-            <Button
-                android:id="@+id/SingleThreadExecutionPattern"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="SingleThreadExecution"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/proxy" />
+<!--            <Button-->
+<!--                android:id="@+id/mediator"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Mediator"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/visitor" />-->
 
-            <Button
-                android:id="@+id/ImmutablePattern"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Immutable"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/command" />
+<!--            <Button-->
+<!--                android:id="@+id/observer"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Observer"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/strategy"-->
+<!--                app:layout_constraintStart_toEndOf="@id/decorator"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/chain_of_responsibility" />-->
 
-            <Button
-                android:id="@+id/GuardedSuspensionPatternActivity"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="GuardedSuspension"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toStartOf="@id/ImmutablePattern"
-                app:layout_constraintStart_toEndOf="@id/decorator"
-                app:layout_constraintTop_toBottomOf="@+id/interpreter" />
+<!--            <Button-->
+<!--                android:id="@+id/memento"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Memento"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/facade" />-->
 
-            <Button
-                android:id="@+id/BalkingPattern"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="Balking"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/SingleThreadExecutionPattern" />
+<!--            <Button-->
+<!--                android:id="@+id/state"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="State"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/mediator" />-->
 
-            <Button
-                android:id="@+id/ProducerConsumerPattern"
-                android:layout_width="136dp"
-                android:layout_height="100dp"
-                android:text="ProducerConsumer"
-                android:textAllCaps="false"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ImmutablePattern" />
+<!--            <Button-->
+<!--                android:id="@+id/flyweight"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Flyweight"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/strategy"-->
+<!--                app:layout_constraintStart_toEndOf="@id/decorator"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/observer" />-->
 
-            <!--    <Button-->
-            <!--        android:id="@+id/a"-->
-            <!--        android:layout_width="135dp"-->
-            <!--        android:layout_height="100dp"-->
-            <!--        android:text="iterator"-->
-            <!--        android:textAllCaps="false"-->
-            <!--        app:layout_constraintStart_toStartOf="parent"-->
-            <!--        app:layout_constraintTop_toTopOf="parent" />-->
+<!--            <Button-->
+<!--                android:id="@+id/proxy"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Proxy"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/memento" />-->
 
-            <!--    <Button-->
-            <!--        android:id="@+id/b"-->
-            <!--        android:layout_width="136dp"-->
-            <!--        android:layout_height="100dp"-->
-            <!--        android:text="Adapter"-->
-            <!--        android:textAllCaps="false"-->
-            <!--        app:layout_constraintStart_toEndOf="@id/a"-->
-            <!--        app:layout_constraintEnd_toStartOf="@id/c"-->
-            <!--        app:layout_constraintTop_toTopOf="parent" />-->
+<!--            <Button-->
+<!--                android:id="@+id/command"-->
+<!--                android:layout_width="135dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Command"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/state" />-->
 
-            <!--    <Button-->
-            <!--        android:id="@+id/c"-->
-            <!--        android:layout_width="136dp"-->
-            <!--        android:layout_height="100dp"-->
-            <!--        android:text="Template Method"-->
-            <!--        android:textAllCaps="false"-->
-            <!--        app:layout_constraintEnd_toEndOf="parent"-->
-            <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+<!--            <Button-->
+<!--                android:id="@+id/interpreter"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Interpreter"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/strategy"-->
+<!--                app:layout_constraintStart_toEndOf="@id/decorator"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/flyweight" />-->
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+<!--&lt;!&ndash;            /*Multi Thread Design Pattern*/&ndash;&gt;-->
+<!--            <Button-->
+<!--                android:id="@+id/SingleThreadExecutionPattern"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="SingleThreadExecution"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/proxy" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/ImmutablePattern"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Immutable"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/command" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/GuardedSuspensionPatternActivity"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="GuardedSuspension"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toStartOf="@id/ImmutablePattern"-->
+<!--                app:layout_constraintStart_toEndOf="@id/decorator"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/interpreter" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/BalkingPattern"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="Balking"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/SingleThreadExecutionPattern" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/ProducerConsumerPattern"-->
+<!--                android:layout_width="136dp"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:text="ProducerConsumer"-->
+<!--                android:textAllCaps="false"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/ImmutablePattern" />-->
+
+<!--            &lt;!&ndash;    <Button&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:id="@+id/a"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_width="135dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_height="100dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:text="iterator"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textAllCaps="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;    <Button&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:id="@+id/b"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_width="136dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_height="100dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:text="Adapter"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textAllCaps="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintStart_toEndOf="@id/a"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintEnd_toStartOf="@id/c"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--            &lt;!&ndash;    <Button&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:id="@+id/c"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_width="136dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_height="100dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:text="Template Method"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:textAllCaps="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintTop_toTopOf="parent"/>&ndash;&gt;-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--    </ScrollView>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,12 +1,14 @@
-package com.designpattern.basic.templatemethod;
+package com.designpattern.basic.observer;
 
 import com.designpattern.AbsBaseDesignPatternActivity;
 import com.designpattern.AbsMainCode;
-import com.designpattern.basic.templatemethod.code.Main;
+import com.designpattern.basic.observer.code.Main;
 
 import java.util.ArrayList;
 
-public class TemplateMethodPatternActivity extends AbsBaseDesignPatternActivity {
+public class ObserverPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = ObserverPattern.class.getSimpleName();
+
     @Override
     protected AbsMainCode makeMainCode() {
         Main main = new Main();
@@ -17,8 +19,7 @@ public class TemplateMethodPatternActivity extends AbsBaseDesignPatternActivity 
     protected ArrayList<String> summaryDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
-        strings.add("スーパークラスで処理の枠組みを定め、サブクラスでその具体的内容を定める方式");
-        strings.add("いわゆるオブジェクト指向のポリフォーリズム");
+        strings.add("状態変化に応じた処理を記述する方式");
         return strings;
     }
 
@@ -26,7 +27,7 @@ public class TemplateMethodPatternActivity extends AbsBaseDesignPatternActivity 
     protected ArrayList<String> meritDesc() {
         ArrayList<String> strings = new ArrayList<String>() {
         };
-        strings.add("ロジックの共通化ができる");
+        strings.add("observerは必ずインタフェースを作るそれをGeneretorはそれを使ってobserverさせることで、交換可能性を上げることができる");
         return strings;
     }
 }

@@ -6,8 +6,8 @@ import com.designpattern.basic.proxy.code.Main;
 
 import java.util.ArrayList;
 
-public class ProxyPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = ProxyPatternActivity.class.getSimpleName();
+public class ProxyPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = ProxyPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

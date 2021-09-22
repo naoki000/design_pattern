@@ -6,8 +6,8 @@ import com.designpattern.multithread.guardedsuspension.code.Main;
 
 import java.util.ArrayList;
 
-public class BalkingPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = BalkingPatternActivity.class.getSimpleName();
+public class BalkingPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = BalkingPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

@@ -6,8 +6,8 @@ import com.designpattern.basic.flyweight.code.Main;
 
 import java.util.ArrayList;
 
-public class FlyweightPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = FlyweightPatternActivity.class.getSimpleName();
+public class FlyweightPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = FlyweightPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

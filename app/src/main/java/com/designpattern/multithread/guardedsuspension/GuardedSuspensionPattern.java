@@ -6,8 +6,8 @@ import com.designpattern.multithread.guardedsuspension.code.Main;
 
 import java.util.ArrayList;
 
-public class GuardedSuspensionPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = GuardedSuspensionPatternActivity.class.getSimpleName();
+public class GuardedSuspensionPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = GuardedSuspensionPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

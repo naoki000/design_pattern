@@ -6,8 +6,8 @@ import com.designpattern.multithread.immutable.code.Main;
 
 import java.util.ArrayList;
 
-public class ImmutablePatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = ImmutablePatternActivity.class.getSimpleName();
+public class ImmutablePattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = ImmutablePattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

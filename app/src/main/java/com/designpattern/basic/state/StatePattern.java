@@ -6,8 +6,8 @@ import com.designpattern.basic.state.code.Main;
 
 import java.util.ArrayList;
 
-public class StatePatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = StatePatternActivity.class.getSimpleName();
+public class StatePattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = StatePattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

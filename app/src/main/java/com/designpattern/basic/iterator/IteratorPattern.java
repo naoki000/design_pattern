@@ -6,7 +6,7 @@ import com.designpattern.basic.iterator.code.Main;
 
 import java.util.ArrayList;
 
-public class IteratorPatternActivity extends AbsBaseDesignPatternActivity {
+public class IteratorPattern extends AbsBaseDesignPatternActivity {
     @Override
     protected AbsMainCode makeMainCode() {
         Main main = new Main();

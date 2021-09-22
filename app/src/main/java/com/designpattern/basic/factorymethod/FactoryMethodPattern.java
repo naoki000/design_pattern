@@ -6,8 +6,8 @@ import com.designpattern.basic.factorymethod.code.Main;
 
 import java.util.ArrayList;
 
-public class FactoryMethodPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = FactoryMethodPatternActivity.class.getSimpleName();
+public class FactoryMethodPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = FactoryMethodPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

@@ -6,8 +6,8 @@ import com.designpattern.multithread.producerconsumer.code.Main;
 
 import java.util.ArrayList;
 
-public class ProducerConsumerPatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = ProducerConsumerPatternActivity.class.getSimpleName();
+public class ProducerConsumerPattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = ProducerConsumerPattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

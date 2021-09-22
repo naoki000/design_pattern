@@ -6,8 +6,8 @@ import com.designpattern.basic.prototype.code.Main;
 
 import java.util.ArrayList;
 
-public class PrototypePatternActivity extends AbsBaseDesignPatternActivity {
-    private static String TAG = PrototypePatternActivity.class.getSimpleName();
+public class PrototypePattern extends AbsBaseDesignPatternActivity {
+    private static String TAG = PrototypePattern.class.getSimpleName();
 
     @Override
     protected AbsMainCode makeMainCode() {

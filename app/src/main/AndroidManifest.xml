@@ -17,36 +17,36 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".basic.iterator.IteratorPatternActivity"/>
-        <activity android:name=".basic.adapter.AdapterPatternActivity"/>
-        <activity android:name=".basic.templatemethod.TemplateMethodPatternActivity"/>
-        <activity android:name=".basic.factorymethod.FactoryMethodPatternActivity"/>
-        <activity android:name=".basic.singleton.SingletonPatternActivity"/>
-        <activity android:name=".basic.prototype.PrototypePatternActivity"/>
-        <activity android:name=".basic.builder.BuilderPatternActivity"/>
-        <activity android:name=".basic.abstractfactory.AbstractFactoryPatternActivity"/>
-        <activity android:name=".basic.bridge.BridgePatternActivity"/>
-        <activity android:name=".basic.strategy.StrategyPatternActivity"/>
-        <activity android:name=".basic.composite.CompositePatternActivity"/>
-        <activity android:name=".basic.decorator.DecoratorPatternActivity"/>
-        <activity android:name=".basic.visitor.VisitorPatternActivity"/>
-        <activity android:name=".basic.chainofresponsibility.ChainOfResponsibilityPatternActivity"/>
-        <activity android:name=".basic.facade.FacadePatternActivity"/>
-        <activity android:name=".basic.madiator.MediatorPatternActivity"/>
-        <activity android:name=".basic.observer.ObserverPatternActivity"/>
-        <activity android:name=".basic.memento.MementoPatternActivity"/>
-        <activity android:name=".basic.state.StatePatternActivity"/>
-        <activity android:name=".basic.flyweight.FlyweightPatternActivity"/>
-        <activity android:name=".basic.proxy.ProxyPatternActivity"/>
-        <activity android:name=".basic.command.CommandPatternActivity"/>
-        <activity android:name=".basic.interpreter.InterpreterPatternActivity"/>
+        <activity android:name=".basic.iterator.IteratorPattern"/>
+        <activity android:name=".basic.adapter.AdapterPattern"/>
+        <activity android:name=".basic.templatemethod.TemplateMethodPattern"/>
+        <activity android:name=".basic.factorymethod.FactoryMethodPattern"/>
+        <activity android:name=".basic.singleton.SingletonPattern"/>
+        <activity android:name=".basic.prototype.PrototypePattern"/>
+        <activity android:name=".basic.builder.BuilderPattern"/>
+        <activity android:name=".basic.abstractfactory.AbstractFactoryPattern"/>
+        <activity android:name=".basic.bridge.BridgePattern"/>
+        <activity android:name=".basic.strategy.StrategyPattern"/>
+        <activity android:name=".basic.composite.CompositePattern"/>
+        <activity android:name=".basic.decorator.DecoratorPattern"/>
+        <activity android:name=".basic.visitor.VisitorPattern"/>
+        <activity android:name=".basic.chainofresponsibility.ChainOfResponsibilityPattern"/>
+        <activity android:name=".basic.facade.FacadePattern"/>
+        <activity android:name=".basic.madiator.MediatorPattern"/>
+        <activity android:name=".basic.observer.ObserverPattern"/>
+        <activity android:name=".basic.memento.MementoPattern"/>
+        <activity android:name=".basic.state.StatePattern"/>
+        <activity android:name=".basic.flyweight.FlyweightPattern"/>
+        <activity android:name=".basic.proxy.ProxyPattern"/>
+        <activity android:name=".basic.command.CommandPattern"/>
+        <activity android:name=".basic.interpreter.InterpreterPattern"/>
 
         <!--Multi thread-->
-        <activity android:name=".multithread.singlethread.SingleThreadExecutionPatternActivity"/>
-        <activity android:name=".multithread.immutable.ImmutablePatternActivity"/>
-        <activity android:name=".multithread.guardedsuspension.GuardedSuspensionPatternActivity"/>
-        <activity android:name=".multithread.balking.BalkingPatternActivity"/>
-        <activity android:name=".multithread.producerconsumer.ProducerConsumerPatternActivity"/>
+        <activity android:name=".multithread.singlethread.SingleThreadExecutionPattern"/>
+        <activity android:name=".multithread.immutable.ImmutablePattern"/>
+        <activity android:name=".multithread.guardedsuspension.GuardedSuspensionPattern"/>
+        <activity android:name=".multithread.balking.BalkingPattern"/>
+        <activity android:name=".multithread.producerconsumer.ProducerConsumerPattern"/>
 
     </application>
 
